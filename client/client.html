@@ -3,6 +3,12 @@
 <head>
   <title>Project 1 | Katy Mollenkopf</title>
   <link rel="stylesheet" type="text/css" href="style.css">
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.min.js"></script>
   <script type="text/babel">
@@ -39,7 +45,7 @@
       }
     };
 
-    // for POST request to create a new user
+    // for POST request to create a new card
     const requestCreate = (e, nameForm) => {
       // grab name and age fields
       const name = nameForm.querySelector('#nameField').value;
@@ -93,7 +99,121 @@
   </script>
 </head>
 <body>
-  <h1>Project 1 Landing Page</h1>
-  <h2>Katy Mollenkopf</h2>
+<h1>Plotting Productivity</h1>
+<hr>
+<div class="row justify-content-center">
+  <!-- To-Do List Column -->
+  <div class="col-lg-4 col-md-4 column">
+    <h2>To-Do</h2>
+    <div class="card container-fluid">
+      <h3>Example card title</h3>
+      <ul>
+        <li class="due">Due Date</li>
+        <li class="priority">
+          Priority Level
+          <select>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+          </select>
+        </li>
+        <li class="desc">
+          <p>description goes here lorem ipsum etc etc</p>
+        </li>
+        <li class="status">
+            To-do, in progress, or complete
+            <select>
+              <option value="1">1</option>
+              <option value="2">1</option>
+              <option value="3">1</option>
+            </select>
+          </li>
+      </ul>
+    </div>
+    <div class="card container-fluid">
+        <h3>Example card title</h3>
+        <ul>
+          <li class="due">Due Date</li>
+          <li class="priority">
+            Priority Level
+            <select>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+            </select>
+          </li>
+          <li class="desc">
+            <p>description goes here lorem ipsum etc etc</p>
+          </li>
+          <li class="status">
+              To-do, in progress, or complete
+              <select>
+                <option value="1">1</option>
+                <option value="2">1</option>
+                <option value="3">1</option>
+              </select>
+            </li>
+        </ul>
+      </div>
+  </div>
+  <!-- In Progress List Column -->
+  <div class="col-lg-4 col-md-4 column">
+    <h2>In-Progress</h2>
+      <div class="card container-fluid">
+          <h3>Example card title</h3>
+          <ul>
+            <li class="due">Due Date</li>
+            <li class="priority">
+              Priority Level
+              <select>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+              </select>
+            </li>
+            <li class="desc">
+              <p>description goes here lorem ipsum etc etc</p>
+            </li>
+            <li class="status">
+                To-do, in progress, or complete
+                <select>
+                  <option value="1">1</option>
+                  <option value="2">1</option>
+                  <option value="3">1</option>
+                </select>
+              </li>
+          </ul>
+      </div>
+  </div>
+    <!-- Completed List Column -->
+    <div class="col-lg-4 col-md-4 column">
+      <h2>Completed</h2>
+        <div class="card container-fluid">
+            <h3>Example card title</h3>
+            <ul>
+              <li class="due">Due Date</li>
+              <li class="priority">
+                Priority Level
+                <select>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                </select>
+              </li>
+              <li class="desc">
+                <p>description goes here lorem ipsum etc etc</p>
+              </li>
+              <li class="status">
+                  To-do, in progress, or complete
+                  <select>
+                    <option value="1">1</option>
+                    <option value="2">1</option>
+                    <option value="3">1</option>
+                  </select>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
 </body>
 </html>
