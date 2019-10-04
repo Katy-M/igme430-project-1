@@ -46,21 +46,21 @@
     };
 
     // for POST request to create a new card
-    const requestCreate = (e, nameForm) => {
-      // grab name and age fields
-      const name = nameForm.querySelector('#nameField').value;
-      const age = nameForm.querySelector('#ageField').value;
+    const requestCreateCard = (e, cardForm) => {
+      // grab all applicable fields
 
       //create a new AJAX request (asynchronous)
       const xhr = new XMLHttpRequest();
       //setup connect using the selected method and url
-      xhr.open('POST', '/addUser', true);
+      xhr.open('POST', '/createUser', true);
       xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
       xhr.setRequestHeader ('Accept', 'application/json');
       
       xhr.onload = () => handleResponse(xhr, true);
 
-      xhr.send(`name=${name}&age=${age}`);
+      xhr.send(`name=${name}&age=${age}
+      
+      `);
 
       e.preventDefault();
       return false;
@@ -81,10 +81,8 @@
       if(method == 'get') {
         //set onload to parse request and get json message
         xhr.onload = () => handleResponse(xhr, true);
-      } else {
-        // head request
-        xhr.onload = () => handleResponse(xhr, false);
       }
+
       //send ajax request
       xhr.send();
 
@@ -93,17 +91,26 @@
     };
     
     const init = () => {
+
     };
+
+    // when the user presses the create button, make a blank card template
+    const onCreate = (e) => {
+
+    }
 
     window.onload = init;
   </script>
 </head>
 <body>
-<h1>Plotting Productivity</h1>
+  <div class="row justify content center">
+      <h1 class="col-lg-6 col-md-6">Plotting Productivity</h1>
+      <button class="col-lg-6 col-md-6" id="createButton">Create New Card</button>
+  </div>
 <hr>
 <div class="row justify-content-center">
   <!-- To-Do List Column -->
-  <div class="col-lg-4 col-md-4 column">
+  <div class="col-lg-4 col-md-4 column" id="todo">
     <h2>To-Do</h2>
     <div class="card container-fluid">
       <h3>Example card title</h3>
@@ -129,6 +136,7 @@
             </select>
           </li>
       </ul>
+      <button>Update Card</button>
     </div>
     <div class="card container-fluid">
         <h3>Example card title</h3>
@@ -157,7 +165,7 @@
       </div>
   </div>
   <!-- In Progress List Column -->
-  <div class="col-lg-4 col-md-4 column">
+  <div class="col-lg-4 col-md-4 column" id="inProgress">
     <h2>In-Progress</h2>
       <div class="card container-fluid">
           <h3>Example card title</h3>
@@ -186,7 +194,7 @@
       </div>
   </div>
     <!-- Completed List Column -->
-    <div class="col-lg-4 col-md-4 column">
+    <div class="col-lg-4 col-md-4 column" id="completed">
       <h2>Completed</h2>
         <div class="card container-fluid">
             <h3>Example card title</h3>
@@ -215,5 +223,6 @@
         </div>
     </div>
 </div>
+<div class="container-fluid" id="content"></div>
 </body>
 </html>
