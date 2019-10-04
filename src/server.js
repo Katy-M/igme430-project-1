@@ -48,7 +48,7 @@ const urlStruct = {
     '/style.css': htmlResponses.getStylesheet,
     notFound: jsonResponses.notFound,
   },
-  POST:{
+  POST: {
     '/createCard': jsonResponses.createCard,
   },
 };
@@ -60,7 +60,7 @@ const onRequest = (request, response) => {
   if (urlStruct[request.method][parsedUrl.pathname]) {
     // check if method is POST
     if (request.method === 'POST') {
-      handlePost(request,response,parsedUrl)
+      handlePost(request, response, parsedUrl);
     } else {
       urlStruct[request.method][parsedUrl.pathname](request, response);
     }
