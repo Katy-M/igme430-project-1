@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.min.js"></script>
+  <!-- <script src="./index.js"></script> -->
   <script type="text/babel">
   const handleResponse = (xhr, parseResponse) => {
       const content = document.querySelector('#content');
@@ -98,131 +99,12 @@
     const onCreate = (e) => {
 
     }
-
-    window.onload = init;
   </script>
 </head>
 <body>
-  <div class="row justify content center">
-      <h1 class="col-lg-6 col-md-6">Plotting Productivity</h1>
-      <button class="col-lg-6 col-md-6" id="createButton">Create New Card</button>
-  </div>
-<hr>
-<div class="row justify-content-center">
-  <!-- To-Do List Column -->
-  <div class="col-lg-4 col-md-4 column" id="todo">
-    <h2>To-Do</h2>
-    <div class="card container-fluid">
-      <h3>Example card title</h3>
-      <ul>
-        <li class="due">Due Date</li>
-        <li class="priority">
-          Priority Level
-          <select>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-          </select>
-        </li>
-        <li class="desc">
-          <p>description goes here lorem ipsum etc etc</p>
-        </li>
-        <li class="status">
-            To-do, in progress, or complete
-            <select>
-              <option value="1">1</option>
-              <option value="2">1</option>
-              <option value="3">1</option>
-            </select>
-          </li>
-      </ul>
-      <button>Update Card</button>
-    </div>
-    <div class="card container-fluid">
-        <h3>Example card title</h3>
-        <ul>
-          <li class="due">Due Date</li>
-          <li class="priority">
-            Priority Level
-            <select>
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-            </select>
-          </li>
-          <li class="desc">
-            <p>description goes here lorem ipsum etc etc</p>
-          </li>
-          <li class="status">
-              To-do, in progress, or complete
-              <select>
-                <option value="1">1</option>
-                <option value="2">1</option>
-                <option value="3">1</option>
-              </select>
-            </li>
-        </ul>
-      </div>
-  </div>
-  <!-- In Progress List Column -->
-  <div class="col-lg-4 col-md-4 column" id="inProgress">
-    <h2>In-Progress</h2>
-      <div class="card container-fluid">
-          <h3>Example card title</h3>
-          <ul>
-            <li class="due">Due Date</li>
-            <li class="priority">
-              Priority Level
-              <select>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-              </select>
-            </li>
-            <li class="desc">
-              <p>description goes here lorem ipsum etc etc</p>
-            </li>
-            <li class="status">
-                To-do, in progress, or complete
-                <select>
-                  <option value="1">1</option>
-                  <option value="2">1</option>
-                  <option value="3">1</option>
-                </select>
-              </li>
-          </ul>
-      </div>
-  </div>
-    <!-- Completed List Column -->
-    <div class="col-lg-4 col-md-4 column" id="completed">
-      <h2>Completed</h2>
-        <div class="card container-fluid">
-            <h3>Example card title</h3>
-            <ul>
-              <li class="due">Due Date</li>
-              <li class="priority">
-                Priority Level
-                <select>
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                </select>
-              </li>
-              <li class="desc">
-                <p>description goes here lorem ipsum etc etc</p>
-              </li>
-              <li class="status">
-                  To-do, in progress, or complete
-                  <select>
-                    <option value="1">1</option>
-                    <option value="2">1</option>
-                    <option value="3">1</option>
-                  </select>
-                </li>
-            </ul>
-        </div>
-    </div>
-</div>
-<div class="container-fluid" id="content"></div>
+  <div id="root"></div>
+  <div class="container-fluid" id="content"></div>
+
+  <script src="/reactApp"></script>
 </body>
 </html>

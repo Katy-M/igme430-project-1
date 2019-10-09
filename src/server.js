@@ -46,6 +46,7 @@ const urlStruct = {
   GET: {
     '/': htmlResponses.getIndex,
     '/style.css': htmlResponses.getStylesheet,
+    '/reactApp': htmlResponses.getApp,
     notFound: jsonResponses.notFound,
   },
   POST: {
